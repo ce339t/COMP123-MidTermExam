@@ -31,7 +31,7 @@ namespace COMP123_MidTermExam
         // CREATE the public GenerateLottoNumbers method here ----------------
         public void GenerateLottoNumbers()
         {
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= ElementNumber; i++)
             {
                 PickElements();
 
@@ -39,7 +39,7 @@ namespace COMP123_MidTermExam
 
                 foreach (var item in ElementList)
                 {
-                    Console.Write($"{item,2} ");
+                    Console.Write($"{item.ToString(),2} ");
 
                 }
 

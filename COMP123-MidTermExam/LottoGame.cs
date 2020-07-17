@@ -4,7 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*Created By: Christina May Pakingan
+  Student No. 301121940
+  MidTerm Test in COMP123
+  Date Created: July 15, 2020
+  Modified: July 16, 2020*/
 namespace COMP123_MidTermExam
 {
     /**
@@ -30,53 +34,31 @@ namespace COMP123_MidTermExam
         // CREATE public properties here -----------------------------------------
         public List<int> ElementList
         {
-            get
-            {
-                return _elementList;
-            }
+            get { return _elementList; }
         }
+
         public int ElementNumber
         {
-            get
-            {
-                return _elementNumber;
-            }
+            get { return _elementNumber; }
 
-            set
-            {
-                _elementNumber = value;
-            }
+            set { _elementNumber = value; }
         }
 
         public List<int> NumberList
         {
-            get
-            {
-                return _numberList;
-            }
-            set
-            {
-                _numberList = value;
-            }
+            get { return _numberList; }
+            set { _numberList = value; }
         }
+
         public Random random
-        { 
-            get
-            {
-                return _random;
-            }
+        {
+            get { return _random; }
         }
 
         public int SetSize
         {
-            get
-            {
-                return _setSize;
-            }
-            set
-            {
-                _setSize = value;
-            }
+            get { return _setSize; }
+            set { _setSize = value; }
         }
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -110,17 +92,18 @@ namespace COMP123_MidTermExam
         // CREATE the private _initialize method here -----------------------------
         private void _initialize()
         {
-         _numberList = new List<int>();
-         _elementList = new List<int>();
-         _random = new Random();
+            _numberList = new List<int>();
+            _elementList = new List<int>();
+            _random = new Random();
 
-        } 
+        }
+
         // CREATE the private _build method here -----------------------------------
         private void _build()
         {
             for (int i = 1; i <= SetSize; i++)
             {
-               NumberList.Add(i);
+                NumberList.Add(i);
             }
         }
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -153,7 +136,6 @@ namespace COMP123_MidTermExam
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
-
         public void PickElements()
         {
             if (ElementList.Count > 0)
@@ -164,23 +146,19 @@ namespace COMP123_MidTermExam
             }
 
 
-            for (int i = 1; i < _elementNumber; i++)
+            for (int i = 1; i <= ElementNumber; i++)
             {
-                int index = _random.Next(1, 50);
-                ElementList.Add(index);
-                if (NumberList.Contains(index))
-                {
-                    index = _random.Next(1, 50);
-
-                    NumberList.Remove(index);
-                }
+                int index = _random.Next(NumberList.Count);
+                ElementList.Add(NumberList[index]);
+                NumberList.RemoveAt(index);
             }
 
-
-                ElementList.Sort();
-            }
-            
+             ElementList.Sort();
 
         }
+
+
     }
+}
+    
 

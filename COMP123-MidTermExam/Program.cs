@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*Created By: Christina May Pakingan
+  Student No. 301121940
+  MidTerm Test in COMP123
+  Date Created: July 15, 2020
+  Modified: July 16, 2020*/
 namespace COMP123_MidTermExam
 {
     /**

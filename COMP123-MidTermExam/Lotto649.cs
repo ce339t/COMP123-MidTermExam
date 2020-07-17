@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace COMP123_MidTermExam
 {
+/*Created By: Christina May Pakingan
+  Student No. 301121940
+  MidTerm Test in COMP123
+  Date Created: July 15, 2020
+  Modidied: July 16, 2020*/
+
     /**
      * <summary>
      * This class is a subclass of the LottoGame abstract superclass
@@ -35,7 +41,7 @@ namespace COMP123_MidTermExam
         // CREATE the public GenerateLottoNumbers method here ----------------
         public void GenerateLottoNumbers()
         {
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= ElementNumber; i++)
             {
                 PickElements();
 
